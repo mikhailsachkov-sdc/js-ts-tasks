@@ -5,5 +5,5 @@
  * @returns {number}
  */
 module.exports.volumeCone = function volumeCone(h, r) {
-  return ((Math.PI * r * r * h) / 3).toFixed(2);
+  return +((Math.PI * r * r * h) / 3).toFixed(2);
 };
