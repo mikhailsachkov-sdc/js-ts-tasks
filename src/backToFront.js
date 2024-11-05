@@ -8,5 +8,5 @@ module.exports.backToFront = function backToFront(str, symbolsCount) {
   if (str.length < symbolsCount) return str;
 
   const ch = str.slice(-symbolsCount);
-  return str.padStart(str.length + symbolsCount, ch).padEnd(str.length + 2 * symbolsCount, ch);
+  return ch + str + ch;
 };
