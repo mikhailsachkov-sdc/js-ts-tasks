@@ -3,7 +3,7 @@
  * Return a string formatted "wholePart remainder"
  * @param {number} n - number
  * @param {number} k - number
- * @returns {number}
+ * @returns {string}
  */
 module.exports.divider = function divider(n, k) {
   const wholePart = Math.floor(n / k);
