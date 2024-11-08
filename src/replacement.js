@@ -8,5 +8,17 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  for (let i = 0; i < arr.length; i++) {
+    const abs = Math.abs(arr[i]);
+    let to = 4;
+    if (abs < 10) {
+      to = 1;
+    } else if (abs < 100) {
+      to = 2;
+    } else if (abs < 1000) {
+      to = 3;
+    }
+    arr.splice(i, 1, to);
+  }
+  return arr;
 };

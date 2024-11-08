@@ -6,8 +6,22 @@
  * answer: 'gabcdef' - a common substring for both strings
  * @param {string} str1
  * @param {string} str2
- * @returns {number}
+ * @returns {string}
  */
 module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let mostMatches = '';
+  for (let i = 0; i < str1.length; i++) {
+    let matches = '';
+    for (let j = 0; j < str2.length; j++) {
+      if (str1[i + matches.length] === str2[j]) {
+        matches += str2[j];
+        if (matches.length > mostMatches.length) {
+          mostMatches = matches;
+        }
+      } else {
+        matches = '';
+      }
+    }
+  }
+  return mostMatches;
 };
