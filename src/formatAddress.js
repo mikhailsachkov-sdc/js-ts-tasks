@@ -4,5 +4,5 @@
  * @returns {function}
  */
 module.exports.formatAddress = function formatAddress() {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return addr => `${addr.street}, ${addr.house}, ${addr.apartment}, ${addr.city}, ${addr.postalCode}, ${addr.country}`;
 };
