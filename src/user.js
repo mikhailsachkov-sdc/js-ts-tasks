@@ -98,7 +98,7 @@ module.exports.createUsersSortFn = function (TestUtils) {
  * @return {Array<User>}
  */
 module.exports.celebrate = function (users) {
-  for (let i = 1; i < users.length; i += 2) {
+  for (let i = 0; i < users.length; i += 2) {
     users[i].celebrateBirthday();
   }
   return users;
